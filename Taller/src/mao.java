@@ -18,6 +18,15 @@ public class mao {
 		ArrayList<Integer> mon_ataque = new ArrayList<Integer>();
 		ArrayList<String> mon_clase = new ArrayList<String>();
 		ArrayList<Integer> mon_velocidad = new ArrayList<Integer>();
+		
+		ArrayList<String> spells = new ArrayList<String>();
+		ArrayList<Integer> damages = new ArrayList<Integer>();
+
+		
+		ArrayList<String> caster = new ArrayList<String>();
+		ArrayList<String> casteo = new ArrayList<String>();
+
+		
 		File jugadores = new File("Jugadores.txt");
 		File enemigos = new File("Enemigos.txt");
 		File hechizos = new File("Hechizos.txt");
@@ -45,7 +54,21 @@ public class mao {
 			mon_velocidad.add(Integer.parseInt(parts[4].trim()));
 			
 		}
-		//scanneres no resuletos
+		Scanner scan3 = new Scanner(hechizos);
+		while (scan3.hasNextLine()) {
+			String parts[]=scan3.nextLine().split(",");
+			spells.add(parts[0].trim());
+			damages.add(Integer.parseInt(parts[1].trim()));
+			
+		}
+		Scanner scan4 = new Scanner(he_jugadores);
+		while (scan4.hasNextLine()) {
+			String parts[]=scan4.nextLine().split(",");
+			caster.add(parts[0].trim());
+			casteo.add(parts[1].trim());
+			
+		}
+/*scanneres no resuletos
 		Scanner scan3 = new Scanner(hechizos);
 		while (scan3.hasNextLine()) {
 			String parts[]=scan3.nextLine().split(",");
@@ -59,7 +82,7 @@ public class mao {
 			usuarios.add(parts[0].trim());
 			contrasenas.add(parts[1].trim());
 		}
-		
+*/
 
 		System.out.println(usuarios);
 		System.out.println(contrasenas);
@@ -183,13 +206,35 @@ public class mao {
 			System.out.println("5. Salir");
 			int ingresado= read.nextInt();
 			if (ingresado==1) {
+				Scanner read_ju = new Scanner(System.in);
 				System.out.println("Jugador a eliminar:");
-				String eliminar_jugador=read.nextLine();
-				
+				String eliminar_jugador=read_ju.nextLine();
+				int indice_jugador_eliminar= usuarios.indexOf(eliminar_jugador);
+				usuarios.remove(indice_jugador_eliminar);
+				contrasenas.remove(indice_jugador_eliminar);
+				vida.remove(indice_jugador_eliminar);
+				ataque.remove(indice_jugador_eliminar);
+				defensa.remove(indice_jugador_eliminar);
+				velocidad.remove(indice_jugador_eliminar);
+				can_hechizos.remove(indice_jugador_eliminar);
+				exp.remove(indice_jugador_eliminar);
 			}
 			else if (ingresado==2) {
 				System.out.println("Enemigo a agregar:");
 				String enemigo_nuevo=read.nextLine();
+				mon_nombre.add(enemigo_nuevo);
+				System.out.println("Ingrese vida:");
+				int vida_nuevo_enemigo=read.nextInt();
+				mon_vida.add(vida_nuevo_enemigo);
+				System.out.println("Ingrese ataque:");
+				int ataque_nuevo_enemigo=read.nextInt();
+				mon_ataque.add(ataque_nuevo_enemigo);
+				System.out.println("Ingrese clase:");
+				String clase_nuevo_enemigo=read.nextLine();
+				mon_clase.add(clase_nuevo_enemigo);
+				System.out.println("Ingrese velocidad:");
+				int velocidad_nuevo_enemigo=read.nextInt();
+				mon_velocidad.add(velocidad_nuevo_enemigo);
 				
 			}
 			else if (ingresado==3) {
@@ -198,15 +243,16 @@ public class mao {
 			}
 			else if (ingresado==4) {
 				System.out.println("Estadísticas:");
-				for(int i=0;i<usuarios.size()+1;i++){
-					System.out.println(usuarios.get(i)+vida.get(i)+ataque.get(i)+defensa.get(i)+velocidad.get(i)+can_hechizos.get(i)+exp.get(i));
+
+				for(int i=0;i<usuarios.size();i++){
+					System.out.println(usuarios.get(i)+" "+vida.get(i)+" "+ataque.get(i)+" "+defensa.get(i)+" "+velocidad.get(i)+" "+can_hechizos.get(i)+" "+exp.get(i));
 				}
 			}
 			else if (ingresado==5) {
 				supermenu=false;
 			}
 		}
-		
+
 /*
 		try {
 			Scanner scanner = new Scanner(new File("Jugadores.txt"));
