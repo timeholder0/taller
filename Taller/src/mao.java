@@ -198,8 +198,8 @@ public class mao {
 			}
 			else if (ingresado==4) {
 				System.out.println("Estadísticas:");
-				for(int i=0;i<usuarios.size();i++){
-					System.out.println(usuarios.get(i)+usuarios.get(i)+usuarios.get(i)+usuarios.get(i)+usuarios.get(i)+usuarios.get(i)+usuarios.get(i));
+				for(int i=0;i<usuarios.size()+1;i++){
+					System.out.println(usuarios.get(i)+vida.get(i)+ataque.get(i)+defensa.get(i)+velocidad.get(i)+can_hechizos.get(i)+exp.get(i));
 				}
 			}
 			else if (ingresado==5) {
