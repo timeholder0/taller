@@ -1,0 +1,8 @@
+Memekaizar,Meteo
+Memekaizar2,Ice
+Memekaizar3,Fire
+Memekaizar4,Dark
+Memekaizar5,Apoc
+Memekaizar6,Thun
+Memekaizar7,Sor
+Memekaizar8,Apoc

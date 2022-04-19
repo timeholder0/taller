@@ -1,0 +1,13 @@
+Bahamut, 3000, 200, S, 500
+Ovehamut, 2000, 100, A, 300
+Mamut1, 1200, 60, B, 200
+Mamut2, 1200, 60, B, 200
+Bacamut1, 900, 40, C, 100
+Bacamut2, 900, 40, C, 100
+Bacamut3, 900, 40, C, 100
+Cemamut1, 500, 20, F, 50
+Cemamut2, 500, 20, F, 50
+Cemamut3, 500, 20, F, 50
+Cemamut4, 500, 20, F, 50
+Cemamut5, 500, 20, F, 50
+Cemamut6, 500, 20, F, 50

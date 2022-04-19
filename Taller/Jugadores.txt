@@ -1,0 +1,8 @@
+Memekaizar, pato123, 10, 10, 10, 10, 2, 1500
+Memekaizar2, pato124, 10, 10, 10, 10, 2, 1500
+Memekaizar3, pato125, 10, 10, 10, 10, 2, 1500
+Memekaizar4, pato126, 10, 10, 10, 10, 2, 1500
+Memekaizar5, pato127, 10, 10, 10, 10, 2, 1500
+Memekaizar6, pato128, 10, 10, 10, 10, 2, 1500
+Memekaizar7, pato129, 10, 10, 10, 10, 2, 1500
+Memekaizar8, pato120, 10, 10, 10, 10, 2, 1500

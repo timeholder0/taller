@@ -1,0 +1,7 @@
+Meteo,9999
+Ice,5600
+Fire,10300
+Dark,13400
+Apoc,8950
+Thun,9850
+Sor,12600
