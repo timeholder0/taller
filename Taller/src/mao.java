@@ -220,26 +220,33 @@ public class mao {
 				exp.remove(indice_jugador_eliminar);
 			}
 			else if (ingresado==2) {
+				Scanner read_ene = new Scanner(System.in);
 				System.out.println("Enemigo a agregar:");
-				String enemigo_nuevo=read.nextLine();
+				String enemigo_nuevo=read_ene.nextLine();
 				mon_nombre.add(enemigo_nuevo);
 				System.out.println("Ingrese vida:");
-				int vida_nuevo_enemigo=read.nextInt();
+				int vida_nuevo_enemigo=read_ene.nextInt();
 				mon_vida.add(vida_nuevo_enemigo);
 				System.out.println("Ingrese ataque:");
-				int ataque_nuevo_enemigo=read.nextInt();
+				int ataque_nuevo_enemigo=read_ene.nextInt();
 				mon_ataque.add(ataque_nuevo_enemigo);
 				System.out.println("Ingrese clase:");
-				String clase_nuevo_enemigo=read.nextLine();
+				String clase_nuevo_enemigo=read_ene.nextLine();
 				mon_clase.add(clase_nuevo_enemigo);
 				System.out.println("Ingrese velocidad:");
-				int velocidad_nuevo_enemigo=read.nextInt();
+				int velocidad_nuevo_enemigo=read_ene.nextInt();
 				mon_velocidad.add(velocidad_nuevo_enemigo);
 				
 			}
 			else if (ingresado==3) {
+				Scanner read_he = new Scanner(System.in);
 				System.out.println("Hechizo a agregar:");
-				String hechizo_nuevo=read.nextLine();
+				String hechizo_nuevo=read_he.nextLine();
+				spells.add(hechizo_nuevo);
+				System.out.println("daño del nuevo hechizo:");
+				int danio_nuevo=read_he.nextInt();
+				damages.add(danio_nuevo);
+				
 			}
 			else if (ingresado==4) {
 				System.out.println("Estadísticas:");
